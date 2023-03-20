@@ -1,0 +1,29 @@
+@import "../../app";
+
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    &__logo {
+        height: 40px;
+    }
+
+    &__list{
+        display: flex;
+        gap: 20px;
+    }
+    
+    &__list li{
+        background-color: $primary;
+        color: black;
+        padding: 10px;
+        border-radius: 2px;
+        list-style-type: none;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}

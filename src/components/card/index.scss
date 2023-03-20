@@ -1,0 +1,15 @@
+@import "../../app";
+
+.Card{
+    z-index: 1;
+    color:black;
+    margin-top: 10px;
+
+    &__wrapper{
+        background-color: white;
+    }
+
+    &__img{
+        width: 200px;
+    }
+}
