@@ -1,10 +1,6 @@
-@import "../../app";
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .Button{
-    width: 200px;
-    background-color: $primary;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 30px 5px;
+    @include button 
 }

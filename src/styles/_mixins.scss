@@ -1,0 +1,44 @@
+@mixin button {
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin: 30px 5px; 
+        background-color: $primary;
+        color:black;
+        cursor: pointer;
+        transition: all 350ms;
+        
+        &:hover{
+            background-color: $secondary;
+        }
+
+        &__active {
+            &:hover{background-color: $active;}
+            background-color: $active;
+            color: $primary
+        }
+    }
+
+@mixin card {
+    padding: 10px;
+    border-radius: 10px;
+    color: $primary;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $secondary;
+        color: black;
+    }
+}
+
+@mixin flex-box (
+    $direction: row,
+    $justify: center,
+    $align: center
+){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,10 +1,9 @@
 import './index.scss'
 
-const Button = ({data, setDrinkData, onClick}) => {
-    
+const Button = ({ data, onClick, category}) => {
+
     return (
-        <button onClick={onClick} className='Button'>{data.strCategory}</button>
+        <button onClick={()=>onClick(data.strCategory)} className={`Button ${category === data.strCategory? "Button__active": ""}`} >{data.strCategory}</button>
     )
 }
-
 export default Button

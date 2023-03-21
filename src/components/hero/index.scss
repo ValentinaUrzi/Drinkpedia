@@ -1,14 +1,13 @@
-@import "../../app";
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .Hero{
 
     &__categories{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-box;
     }
 
-    margin-top: 40px;
+    margin-top: $standard-margin-top;
     
     &__img{
         width: 100%;
@@ -17,7 +16,4 @@
         object-fit: cover;
     }
     
-&__categpries{
-}
-
 }

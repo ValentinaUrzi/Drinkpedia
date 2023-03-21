@@ -1,15 +1,17 @@
-@import "../../app";
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .Card{
     z-index: 1;
-    color:black;
     margin-top: 10px;
-
+    
     &__wrapper{
-        background-color: white;
+        @include card;
+        background-color: $active;
     }
 
     &__img{
+        border-radius: 10px;
         width: 200px;
     }
 }

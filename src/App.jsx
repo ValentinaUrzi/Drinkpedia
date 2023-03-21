@@ -7,21 +7,17 @@ import './App.scss'
 
 function App() {
 
-//   const filterCat = (cat) => {
-//     const filteredCat = drinkData.filter(drink => drink.strCategory !== cat)
-//     setDrinkData(filteredCat)
-//   }
+  const [drinkData, setDrinkData] = useState([])
+  const [category, setCategory] = useState('')
 
-const [drinkData, setDrinkData] = useState([])
-
-return (
-  <div className="App">
-    <Navbar />
-    <Hero drinkData={drinkData} setDrinkData={setDrinkData} />
-    <Content setDrinkData={setDrinkData} />
-    <Footer />
-  </div>
-)
+  return (
+    <div className="App">
+      <Navbar />
+      <Hero category={category} setCategory={setCategory} drinkData={drinkData} />
+      <Content category={category} drinkData={drinkData} setDrinkData={setDrinkData} />
+      <Footer />
+    </div>
+  )
 }
 
 export default App

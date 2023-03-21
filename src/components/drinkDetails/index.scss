@@ -1,0 +1,31 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.DrinkDetails{
+    background-color: $active;
+    width: 70%;
+    margin-bottom: 30px;
+    @include flex-box(row, space-around, center);
+
+    .arrow{
+    width: 40px;
+    height: 40px;
+    }
+
+    &__texts{
+        @include flex-box(column, center, center)
+    }
+
+    .drink__img {
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    &__titles {
+
+    }
+
+    &__desc{
+    @include flex-box(column, center, center);
+    }
+}
