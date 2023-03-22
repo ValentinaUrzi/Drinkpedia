@@ -3,29 +3,67 @@
 
 .DrinkDetails{
     background-color: $active;
-    width: 70%;
+    position: relative;
+    width: 60%;
+    height: 600px;
+    border-radius: 10px;
     margin-bottom: 30px;
+    margin-top: 30px;
+    border: 2px solid $primary;
+    color: $primary;
     @include flex-box(row, space-around, center);
+    
+    h2{
+        position: absolute;
+        font-size: 2rem;
+        top: 10px;
+        color: $secondary;
+    }
 
+    h3{
+        color: $secondary;
+    }
+
+    p{
+        margin: 0;
+    }
+    
     .arrow{
-    width: 40px;
-    height: 40px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
     }
-
+    
     &__texts{
-        @include flex-box(column, center, center)
+        @include flex-box(column, center, space-between);
+        height: 100%;
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: 2px solid $primary;
+        padding-right: 60px;
+        text-align: justify;
+        width: 55%;
     }
 
-    .drink__img {
-        width: 30%;
-        border-radius: 10px;
+    &__titles{
+        align-self: flex-start;
+        width: 100%;
+        gap: 10px;
+        @include flex-box(row, start, center);
     }
-
-    &__titles {
-
-    }
-
+    
     &__desc{
-    @include flex-box(column, center, center);
+        width: 100%;
+        gap: 10px;
+        @include flex-box(column, center, start);
+    }
+    
+    .drink__img {
+        width: 40%;
+        margin-left: 40px;
+        margin-top: 35px;
+        border-radius: 10px;
     }
 }

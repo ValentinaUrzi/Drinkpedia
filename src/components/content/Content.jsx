@@ -4,7 +4,7 @@ import { GET } from '../../utils/http'
 import Card from '../card'
 import DrinkDetails from '../drinkDetails'
 
-const Content = ({ drinkData, setDrinkData, category }) => {
+const Content = ({ drinkData, setDrinkData, category, setCatVisibility }) => {
 
     const [drinkList, setDrinkList] = useState([])
     const [isDetailsVisible, setDetailsVisible] = useState({ visible: false, data: {} })
@@ -35,8 +35,8 @@ const Content = ({ drinkData, setDrinkData, category }) => {
 
     return (
         <div className="Content">
-            {isDetailsVisible.visible ? <DrinkDetails setDetailsVisible={setDetailsVisible} data={isDetailsVisible.data} /> :
-                drinkList.map((drink) => <Card setDetailsVisible={setDetailsVisible} data={drink} key={drink.idDrink} />)}
+            {isDetailsVisible.visible ? <DrinkDetails setCatVisibility={setCatVisibility} setDetailsVisible={setDetailsVisible} data={isDetailsVisible.data} /> :
+                drinkList.map((drink) => <Card setCatVisibility={setCatVisibility} setDetailsVisible={setDetailsVisible} data={drink} key={drink.idDrink} />)}
         </div>
     )
 }

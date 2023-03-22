@@ -1,9 +1,11 @@
 import './index.scss'
 
-const Card = ({ data, setDetailsVisible }) => {
+const Card = ({ data, setDetailsVisible, setCatVisibility }) => {
 
     return (
-        <div onClick={() => setDetailsVisible({ visible: true, data })} className="Card">
+        <div onClick={() => {
+            setDetailsVisible({ visible: true, data })
+            setCatVisibility(false)}} className="Card" >
             <div className="Card__wrapper">
                 <div className="Card__text">
                     <img className="Card__img" src={data.strDrinkThumb} alt={data.strDrink} />
@@ -12,7 +14,7 @@ const Card = ({ data, setDetailsVisible }) => {
                     <p>{data.strAlcoholic}</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

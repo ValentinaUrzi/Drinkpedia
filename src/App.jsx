@@ -9,12 +9,13 @@ function App() {
 
   const [drinkData, setDrinkData] = useState([])
   const [category, setCategory] = useState('')
+  const [isCatVisible, setCatVisibility] = useState(true)
 
   return (
     <div className="App">
       <Navbar />
-      <Hero category={category} setCategory={setCategory} drinkData={drinkData} />
-      <Content category={category} drinkData={drinkData} setDrinkData={setDrinkData} />
+      <Hero category={category} setCategory={setCategory} drinkData={drinkData} isCatVisible={isCatVisible} />
+      <Content category={category} drinkData={drinkData} setDrinkData={setDrinkData} setCatVisibility={setCatVisibility} />
       <Footer />
     </div>
   )
