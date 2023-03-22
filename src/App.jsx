@@ -3,7 +3,7 @@ import Navbar from './components/navbar'
 import Hero from './components/hero'
 import Content from './components/content'
 import Footer from './components/footer'
-import './App.scss'
+import './app.scss'
 
 function App() {
 
