@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+
+.Navbar {
+    @include flex-box;
+    margin-top: $standard-margin-top;
+
+    .logo{
+        height: 40px;
+    }
+
+    .list{
+        display: flex;
+        gap: 20px;
+    
+        li{
+        @include button;
+        list-style-type: none;}
+
+        li:hover {
+            background-color: $secondary;
+        }
+    }
+    
+    @media (max-width: 600px){
+        .list {
+        gap:5px;
+        margin-left: -20px;
+        }
+    }
+}

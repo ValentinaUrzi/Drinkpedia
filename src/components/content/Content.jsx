@@ -1,8 +1,8 @@
-import './index.scss'
 import { useState, useEffect } from 'react'
 import { GET } from '../../utils/http'
 import Card from '../card'
 import DrinkDetails from '../drinkDetails'
+import styles from './index.module.scss'
 
 const Content = ({ drinkData, setDrinkData, category, setCatVisibility }) => {
 
@@ -34,7 +34,7 @@ const Content = ({ drinkData, setDrinkData, category, setCatVisibility }) => {
     }, [category])
 
     return (
-        <div className="Content">
+        <div className={styles.Content}>
             {isDetailsVisible.visible ? <DrinkDetails setCatVisibility={setCatVisibility} setDetailsVisible={setDetailsVisible} data={isDetailsVisible.data} /> :
                 drinkList.map((drink) => <Card setCatVisibility={setCatVisibility} setDetailsVisible={setDetailsVisible} data={drink} key={drink.idDrink} />)}
         </div>

@@ -1,15 +1,15 @@
-import './index.scss'
 import Logo from '../../assets/logo.png'
+import styles from './index.module.scss'
 
 const Navbar = () => {
     return (
-        <div className="Navbar">
-            <img className='Navbar__logo' src={Logo} alt="drinkpedia logo" />
-                <ul className="Navbar__list">
-                    <li>About</li>
-                    <li>Contatti</li>
-                    <li>Social</li>
-                </ul>
+        <div className={styles.Navbar}>
+            <img className={styles.logo} src={Logo} alt="drinkpedia logo" />
+            <ul className={styles.list}>
+                <li>About</li>
+                <li>Contatti</li>
+                <li>Social</li>
+            </ul>
         </div>
     )
 }

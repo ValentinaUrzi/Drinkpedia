@@ -3,7 +3,7 @@ import Navbar from './components/navbar'
 import Hero from './components/hero'
 import Content from './components/content'
 import Footer from './components/footer'
-import './app.scss'
+import styles from "./App.module.scss"
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
   const [isCatVisible, setCatVisibility] = useState(true)
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navbar />
       <Hero category={category} setCategory={setCategory} drinkData={drinkData} isCatVisible={isCatVisible} />
       <Content category={category} drinkData={drinkData} setDrinkData={setDrinkData} setCatVisibility={setCatVisibility} />

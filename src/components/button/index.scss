@@ -2,5 +2,14 @@
 @import '../../styles/variables';
 
 .Button{
-    @include button 
+    @include button;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    
+    .Button {
+        height: 50px;
+        gap:5px;
+    }
 }

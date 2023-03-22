@@ -1,0 +1,17 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.Card{
+    z-index: 1;
+    margin-top: 10px;
+    
+    .wrapper{
+        @include card;
+        background-color: $active;
+    }
+
+    .img{
+        border-radius: 10px;
+        width: 200px;
+    }
+}

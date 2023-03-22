@@ -1,9 +1,0 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
-
-.Content{
-    @include flex-box;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 40px
-}

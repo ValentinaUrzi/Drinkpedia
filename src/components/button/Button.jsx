@@ -1,5 +1,8 @@
 import './index.scss'
 
+// l'ho lasciato globale in quanto il bottone 
+// potrebbe essere usato più volte nell'app
+
 const Button = ({ data, onClick, category}) => {
 
     return (
