@@ -15,15 +15,16 @@
     }
 
     .texts{
-        @include flex-box(row, center, center);
-        gap: 20px;
-        margin-top: 10px;
-        font-size: 12px;
+        @include flex-box(column, center, center);
+    
     }
 
-    @media (max-width: 600px) {
+    @media screen and (min-width: 600px) {
         .texts{
-            @include flex-box(column, center, center);
+            @include flex-box(row, center, center);
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 12px;
         }
     }
 }
