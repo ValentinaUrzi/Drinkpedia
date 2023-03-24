@@ -18,9 +18,6 @@ opacity: 0.90;
 object-fit: cover;
 `
 
-
-
-
 const Hero = ({ drinkData, category, setCategory, isCatVisible }) => {
 
     const onHandleCat = (cat) => setCategory(category === cat ? "" : cat);
