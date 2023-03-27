@@ -23,13 +23,14 @@
 @mixin card {
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: $primary;
     cursor: pointer;
-
-    &:hover{
-        background-color: $secondary;
-        color: black;
-    }
+    width: 230px;
+    height: 420px;
 }
 
 @mixin flex-box (

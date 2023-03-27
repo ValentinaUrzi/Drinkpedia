@@ -1,13 +1,10 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
-
 .Footer{
     @include flex-box(column, center, center);
     margin-top: 50px;
-    gap: 20px;
+    gap: $standard-gap;
 
     p{
-        margin-top: 0;
+        margin-top: $margin-reset;
     }
 
     .logo{
@@ -22,8 +19,8 @@
     @media screen and (min-width: 600px) {
         .texts{
             @include flex-box(row, center, center);
-            gap: 20px;
-            margin-top: 10px;
+            gap: $standard-gap;
+            margin-top: $standard-margin-top;
             font-size: 12px;
         }
     }

@@ -4,7 +4,7 @@ import Hero from './components/hero'
 import Content from './components/content'
 import Footer from './components/footer'
 import CourseModal from './components/courseModal'
-import styles from "./App.module.scss"
+import styles from "./App"
 import Popup from './components/popup'
 import SideMenu from './components/sideMenu/SideMenu'
 

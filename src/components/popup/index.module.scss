@@ -1,17 +1,14 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
-
 .Popup{
     @include flex-box(column, center, center);
     width: 300px;
     height: 200px;
     color: $primary;
     background-color: $active;
-    border-radius: 10px;
+    border-radius: $standard-radius;
     position: fixed;
     top: 40%;
     left: 50%;
-    gap: 10px;
+    gap: $min-gap;
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;

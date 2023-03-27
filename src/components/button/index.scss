@@ -1,6 +1,3 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
-
 .Button{
     @include button;
     text-align: center;

@@ -1,6 +1,3 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
-
 .SideMenu{
     @include flex-box(column, center, center);
     width: 300px;
@@ -16,7 +13,7 @@
     @include flex-box(column, start, center);
     transition: right 400ms;
     padding-top: 30px;
-    gap: 20px;
+    gap: $standard-gap;
     right: 0px;
     
     a{

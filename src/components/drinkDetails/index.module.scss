@@ -1,13 +1,10 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
-
 .DrinkDetails{
     @include flex-box(row, space-around, center);
     background-color: $active;
     position: relative;
     width: 60%;
     height: 600px;
-    border-radius: 10px;
+    border-radius: $standard-radius;
     margin-bottom: 30px;
     margin-top: 30px;
     border: 2px solid $primary;
@@ -25,7 +22,7 @@
     }
 
     p{
-        margin: 0;
+        margin: $margin-reset;
     }
     
     .arrow{
@@ -50,13 +47,13 @@
    .titles{
         align-self: flex-start;
         width: 100%;
-        gap: 10px;
+        gap: $min-gap;
         @include flex-box(row, start, center);
     }
     
     .desc{
         width: 100%;
-        gap: 10px;
+        gap: $min-gap;
         @include flex-box(column, center, start);
     }
     
@@ -64,7 +61,7 @@
         width: 40%;
         margin-left: 40px;
         margin-top: 35px;
-        border-radius: 10px;
+        border-radius: $standard-radius;
     }
 
 }
@@ -85,8 +82,8 @@
 
         .img{
             width: 80%;
+            margin: $margin-reset;
             margin-top: 120px;
-            margin-left: 0px;
         }
 
         .texts{

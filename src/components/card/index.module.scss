@@ -1,16 +1,60 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
-
 .Card{
-    margin-top: 10px;
+    @include card;
+    margin-top: $standard-margin-top;
+    perspective: 1000px;
+    background-color: $active;
     
-    .wrapper{
+    
+    .flipper{
         @include card;
-        background-color: $active;
-    }
+        transition: 0.80s;
+        transform-style: preserve-3d;
+        position: relative;
+        
+        .front, .back {
+            @include card;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .front{
+            z-index: 2;
+            transform: rotateY(0deg);
+            
+            .img{
+                border-radius: $standard-radius;
+                width: 220px;
+                margin-top: -30px;
+            }
 
-    .img{
-        border-radius: 10px;
-        width: 200px;
+            h2{
+                margin-top: $standard-margin-top;
+                font-size: 1.6rem;
+                color: $secondary;
+            }
+        }
+        
+        .back{
+            transform: rotateY(180deg);
+
+            h2{
+                margin-top: $standard-margin-top;
+                font-size: 1.6rem;
+                color: $secondary;
+            }
+
+            h3{
+                margin-top: $standard-margin-top;
+            }
+        }
+        
     }
+    
+    
+}
+
+    .Card:hover .flipper {
+    transform: rotateY(180deg);
 }
